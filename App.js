@@ -49,11 +49,11 @@ export default function App() {
       </View>
       <Text style={styles.moodText}>{text}</Text>
       <View style={styles.buttonContainer}>
-        <TouchableOpacity onPress={handleMinus} style={styles.button}>
-          <FontAwesome5 name="minus" size={50} color="#A96361" />
-        </TouchableOpacity>
         <TouchableOpacity onPress={handlePlus} style={styles.button}>
-          <FontAwesome5 name="plus" size={50} color="#A96361" />
+          <FontAwesome5 name="plus" size={60} color="#A96361" />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={handleMinus} style={styles.button}>
+          <FontAwesome5 name="minus" size={60} color="#A96361" />
         </TouchableOpacity>
       </View>
     </View>
@@ -70,42 +70,48 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   welcomeText: {
-    flex: 2,
-    backgroundColor: 'red',
-    fontSize: 25,
+    fontSize: 26,
+    color: '#7A4E5C',
     textAlign: 'center',
-    textAlignVertical: 'center',
+    fontWeight: '600',
+    marginBottom: 20,
   },
   imageContainer: {
-    flex: 4,
-    backgroundColor: 'blue',
-    width: '65%',
+    width: '75%',
+    height: 280,
+    backgroundColor: '#FFE4EC',
+    borderRadius: 25,
+    justifyContent: 'center',
+    alignItems: 'center',
+
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.1,
+    shadowRadius: 6,
+    elevation: 4,
   },
   image: {
-    width: '100%',
-    height: '100%',
+    width: '90%',
+    height: '90%',
   },
   moodText: {
-    flex: 1,
-    backgroundColor: 'green',
-    fontSize: 25,
-    textAlign: 'center',
-    textAlignVertical: 'center',
-    width: '100%',
+    fontSize: 24,
+    color: '#7A4E5C',
+    marginTop: 15,
+    fontWeight: '600',
   },
   buttonContainer: {
     flex: 1,
     backgroundColor: 'white',
     justifyContent: 'center',
-    flexDirection: 'row',
     alignItems: 'center',
     width: '100%',
-    gap: 120,
+    gap: 60,
   },
   button: {
     backgroundColor: '#EDCECC',
     padding: 10,
-    borderRadius: 20,
+    borderRadius: 50,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 3 },
     shadowOpacity: 0.2,
